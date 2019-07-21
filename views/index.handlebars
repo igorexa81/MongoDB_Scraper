@@ -1,0 +1,38 @@
+<div class="main-heading text-center" style="background-colo">
+  <h1 class="">🗞️ News Scraper 🗞️ </h1>
+  <a class="btn" id="getArticles" style="color: white" href="/scrape">scrape for articles</a>
+   <a href="/saved-articles">Saved Articles</a>
+
+</div>
+
+<div class="text-center" id="wrapper">
+  <div id="articles" class="card">
+    <h3 id="load" style="visibility:hidden" data-text="Loading…">Loading…</h1>
+      {{#each dbArticle}}
+      {{#unless saved}}
+      <div class="card-body">
+        <a target="_blank" class="card-title" href={{link}}>{{title}}</a>
+        <p data-toggle="modal" data-target="#notesModal" class="card-text" data-id={{_id}}>{{summary}}</p>
+        <button class="save-button" data-title="{{title}}" data-link="{{link}}" data-summary="{{summary}}"
+                data-id="{{id}}">
+                Save Article
+            </button>
+      </div>
+      {{/unless}}
+      {{/each}}
+  </div>
+</div>
+
+
+
+<div id="notesModal" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body" id="notes">
+      </div>
+      <div class='modal-footer'>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

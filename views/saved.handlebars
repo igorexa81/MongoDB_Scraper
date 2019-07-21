@@ -1,0 +1,32 @@
+<div class="wrapper">
+    {{!-- header --}}
+    <header>
+        <a href="/">Home</a>
+        <a href="/saved-articles">Saved Articles</a>
+    </header>
+
+    <div class="header">
+        <h1>Your Saved Articles</h1>
+    </div>
+    
+    {{!-- all saved articles will be shown here --}}
+    <div class="saved-article-div">
+        <div class="saved-article">
+            {{#each articles}}
+            {{#if saved}}
+            <ul>
+                <li class="title">{{title}}</li>
+                <li>{{summary}}</li>
+                <li><a href='{{link}}' target='_blank'>Read More</a></li>
+                <button class='delete-article-button' data-title='{{title}}' data-link='{{link}}'
+                    data-summary='{{summary}}' data-id='{{id}}'>
+                    Delete From Saved
+                </button>
+                
+                
+            </ul>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>
