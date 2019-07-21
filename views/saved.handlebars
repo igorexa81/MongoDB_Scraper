@@ -1,17 +1,17 @@
 <div class="wrapper">
     {{!-- header --}}
     <header>
-        <a href="/">Home</a>
-        <a href="/saved-articles">Saved Articles</a>
+        {{!-- <a href="/">Home</a> --}}
+         <a class="btn" id="home" style="color: white" href="/">Home</a>
     </header>
 
-    <div class="header">
-        <h1>Your Saved Articles</h1>
+    <div class="main-heading text-center" style="background-colo">
+        <h1>&#128240; Your Saved Articles &#128240;</h1>
     </div>
     
     {{!-- all saved articles will be shown here --}}
     <div class="saved-article-div">
-        <div class="saved-article">
+        <div id="saved-article" class="card">
             {{#each articles}}
             {{#if saved}}
             <ul>
