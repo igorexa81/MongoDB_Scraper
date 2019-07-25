@@ -20,4 +20,4 @@ After user pressed save button, saved article will go tho the saved article page
 
 ![Shot3](screenshots/screen3.jpg)
 
-This app can be run on a local server or it can be found on heroku.
+This app can be run on a local server or it can be found on heroku, https://newscraper200000.herokuapp.com/
