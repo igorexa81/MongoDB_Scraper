@@ -1,5 +1,8 @@
  body {
-    background-color: #f2f6d0;
+  background-image: url("../images/new2.jpg");
+  
+  
+  /* background-color: #f2f6d0; */
   } 
   h1 {
     font-family: 'Ultra', serif;
